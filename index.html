@@ -5,26 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AlexZavr - Home</title>
   <style>
-    /* Фон з градієнтом */
+    /* Анімований переливний градієнт */
     body {
       margin: 0;
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background: linear-gradient(270deg, #0f2027, #203a43, #2c5364, #0f2027);
+      background-size: 800% 800%;
+      animation: gradientShift 20s ease infinite;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #eee;
       flex-direction: column;
       text-align: center;
     }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
       text-shadow: 0 0 10px #00aaffaa;
     }
-    p {
-      font-size: 1.25rem;
+    h4 {
+      margin-top: 0;
       margin-bottom: 3rem;
       color: #a0c4ffcc;
     }
@@ -42,6 +51,7 @@
       user-select: none;
       display: inline-block;
       cursor: pointer;
+      margin: 10px 0;
     }
     .btn-link:hover {
       background: #008fcc;
@@ -60,8 +70,7 @@
   <a href="Fortline-Omega-Script/GridEditor.html" class="btn-link" target="_blank" rel="noopener noreferrer">
     Open Grid Editor
   </a>
- <h6></h6>
-<a href="https://github.com/Alexzavr/Fortline-Omega-Script" class="btn-link" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/Alexzavr/Fortline-Omega-Script" class="btn-link" target="_blank" rel="noopener noreferrer">
     Open Script Page
   </a>
 </body>
